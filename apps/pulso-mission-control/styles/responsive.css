@@ -1,0 +1,52 @@
+@media (max-width: 1280px) {
+  .appbar { grid-template-columns: auto 1fr auto; }
+  .primary-nav { grid-column: 1 / -1; grid-row: 2; min-height: 48px; border-top: var(--hairline); overflow-x: auto; justify-content: flex-start; }
+  .quiet-action { grid-column: 3; grid-row: 1; }
+  .top-status { grid-column: 2; grid-row: 1; justify-content: flex-end; }
+  .mission-view { grid-template-columns: minmax(250px, 31%) 1fr; }
+  .mission-view > .detail-rail { grid-column: 1 / -1; display: grid; grid-template-columns: 180px 1fr; border-top: var(--hairline); }
+  .mission-view > .detail-rail > header { border-right: var(--hairline); }
+  .mission-view > .detail-rail .detail-list { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .timeline-columns { grid-template-columns: minmax(360px, 34%) 1fr; }
+  .timeline-columns span:last-child { display: none; }
+  .timeline-layout { grid-template-columns: minmax(360px, 34%) 1fr; }
+  .timeline-layout > .detail-rail { grid-column: 1 / -1; display: grid; grid-template-columns: 180px 1fr; border-top: var(--hairline); }
+  .timeline-detail .detail-list { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .map-view { grid-template-columns: 280px 1fr; }
+  .map-view > .detail-rail { grid-column: 1 / -1; }
+  .sensors-view { grid-template-columns: 280px 1fr; }
+  .sensors-view > .detail-rail { grid-column: 1 / -1; }
+  .sessions-view { grid-template-columns: minmax(320px, 38%) 1fr; }
+  .sessions-view > .detail-rail { grid-column: 1 / -1; }
+}
+
+@media (max-width: 780px) {
+  .appbar { grid-template-columns: 1fr auto; }
+  .brand { padding: 14px 16px; }
+  .brand span { display: none; }
+  .top-status { grid-column: 1 / -1; grid-row: 2; overflow-x: auto; border-top: var(--hairline); justify-content: flex-start; }
+  .top-status div { flex: 1 0 112px; }
+  .primary-nav { grid-row: 3; }
+  .quiet-action { grid-column: 2; }
+  .primary-nav button { flex: 0 0 auto; min-height: 46px; }
+  .mission-view, .timeline-layout, .map-view, .sensors-view, .sessions-view { display: block; }
+  .flow-panel, .focus-panel, .event-timeline, .event-inspector, .route-panel, .map-panel, .sensor-list-panel, .sensor-main, .sessions-list-panel, .session-inspector { border-right: 0; border-bottom: var(--hairline); }
+  .mission-view > .detail-rail, .timeline-layout > .detail-rail { display: block; }
+  .mission-view > .detail-rail .detail-list, .timeline-detail .detail-list { display: block; }
+  .evidence-layout, .mission-lower-grid, .evidence-mosaic { grid-template-columns: 1fr; }
+  .evidence-layout > section { border-right: 0; border-bottom: var(--hairline); }
+  .mission-lower-grid section { border-right: 0; }
+  .evidence-mosaic figure { border-right: 0; }
+  .timeline-columns { display: none; }
+  .event-timeline { max-height: 360px; overflow-y: auto; }
+  .map-toolbar { align-items: stretch; flex-direction: column; padding: 14px 0 0 16px; }
+  .map-actions { min-height: 44px; margin-top: 12px; overflow-x: auto; border-top: var(--hairline); }
+  .map-actions button { flex: 0 0 auto; }
+  .map-viewport { min-height: 460px; height: 62vh; }
+  .map-metrics { justify-content: flex-start; overflow-x: auto; }
+  .camera-viewport { min-height: 360px; height: 56vh; }
+  .detection-list { grid-template-columns: 1fr; }
+  .persistence-bar { overflow-x: auto; }
+  .persistence-bar span { flex: 0 0 auto; }
+  .persistence-bar span:last-child { margin-left: 0; }
+}

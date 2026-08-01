@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pulso.local/contracts/pulso-brain-trace-v1.schema.json",
+  "title": "PULSO public brain trace v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "event_id",
+    "captured_monotonic_ns",
+    "category",
+    "label",
+    "summary",
+    "attributes"
+  ],
+  "properties": {
+    "contract_version": { "const": "pulso.brain-trace.v1" },
+    "event_id": { "type": "string", "minLength": 1, "maxLength": 96 },
+    "captured_monotonic_ns": { "type": "integer", "minimum": 0 },
+    "turn_id": { "type": "string", "minLength": 1, "maxLength": 96 },
+    "selected_world_seq": { "type": "integer", "minimum": 0 },
+    "category": {
+      "enum": [
+        "CONTEXT",
+        "TOOL_REQUEST",
+        "TOOL_RESULT",
+        "MODEL_RESPONSE",
+        "CYCLE_COMPLETE",
+        "CANCELED",
+        "ERROR"
+      ]
+    },
+    "label": { "type": "string", "maxLength": 160 },
+    "summary": { "type": "string", "maxLength": 900 },
+    "latency_ms": { "type": "integer", "minimum": 0 },
+    "attributes": {
+      "type": "object",
+      "maxProperties": 16,
+      "additionalProperties": {
+        "type": ["string", "number", "integer", "boolean"]
+      }
+    }
+  }
+}
