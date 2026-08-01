@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "frameworkVersion": "1.1.0",
+  "adapters": [
+    "codex"
+  ],
+  "managedFiles": {
+    ".agents/skills/starloop/agents/openai.yaml": {
+      "source": "content/skill/starloop/agents/openai.yaml",
+      "sha256": "337b47b15e30415475d3b4ee494c02ebc6998a5c2fd03822e0750a99e50b2837"
+    },
+    ".agents/skills/starloop/references/code-quality.md": {
+      "source": "content/skill/starloop/references/code-quality.md",
+      "sha256": "227f2c97981f9fea036e7655e0680d2346b289161c67f6d7d28410cd25d96da0"
+    },
+    ".agents/skills/starloop/references/delivery.md": {
+      "source": "content/skill/starloop/references/delivery.md",
+      "sha256": "66a6e9f99daafe6487e2f0964f8e8ed5d41bc9665a41775ea7b244df79e90b34"
+    },
+    ".agents/skills/starloop/references/documentation.md": {
+      "source": "content/skill/starloop/references/documentation.md",
+      "sha256": "0ff62315a687200436a9b394d2a1ceac621c7869052f29ca4af6b94d5bcc810e"
+    },
+    ".agents/skills/starloop/references/experience-design.md": {
+      "source": "content/skill/starloop/references/experience-design.md",
+      "sha256": "a1706884db3e0a86100ed4e238520c426d0206c03449064171a6ae372b67833d"
+    },
+    ".agents/skills/starloop/references/feature-design.md": {
+      "source": "content/skill/starloop/references/feature-design.md",
+      "sha256": "4b8b100549bb2c93be9b062446282aad288598c4eaf6d75f68e95dfa3aba45f6"
+    },
+    ".agents/skills/starloop/references/latest-update.md": {
+      "source": "content/skill/starloop/references/latest-update.md",
+      "sha256": "eb69c435e4c5e508dc051c0756b321ea92602ee7d91b1426ec36d0185a96314d"
+    },
+    ".agents/skills/starloop/references/product-discovery.md": {
+      "source": "content/skill/starloop/references/product-discovery.md",
+      "sha256": "39ef48a8514ce8f91d0afdc766fe602810954dfccb23db009a8dd98892a976a5"
+    },
+    ".agents/skills/starloop/references/security.md": {
+      "source": "content/skill/starloop/references/security.md",
+      "sha256": "5facfc4a9c96103f4ae45dca883afeecc4a651d3fbffb7d41036fab5cc57f5ec"
+    },
+    ".agents/skills/starloop/references/system-design.md": {
+      "source": "content/skill/starloop/references/system-design.md",
+      "sha256": "a25c84b82a2dc44ec04a05d78dd1e85b014c03235ac37b840e11644b274a81e1"
+    },
+    ".agents/skills/starloop/references/teaching.md": {
+      "source": "content/skill/starloop/references/teaching.md",
+      "sha256": "38f8154627d087b65a016418a0ca42b64750037172b739ce8159d2eab504e750"
+    },
+    ".agents/skills/starloop/SKILL.md": {
+      "source": "content/skill/starloop/SKILL.md",
+      "sha256": "8199288c3ebf84bfc0756faacae58af1f723e3cdd31ee44a8a197fb8bc210977"
+    }
+  },
+  "managedBlocks": {
+    "starloop": {
+      "path": "AGENTS.md",
+      "id": "starloop",
+      "sha256": "ff753026905e6930b1632550e6451ae0e19e0b2e57ab5cc845a2fd8d5b1a18c5"
+    }
+  },
+  "userOwnedPaths": [
+    ".starloop/starloop.json",
+    ".starloop/project/NOW.md"
+  ]
+}

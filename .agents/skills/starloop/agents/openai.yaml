@@ -1,0 +1,6 @@
+interface:
+  display_name: 'Starloop'
+  short_description: 'Senior product-to-proof engineering loop'
+  default_prompt: 'Use $starloop to research, pressure-test, deliver, verify, and explain this product outcome.'
+policy:
+  allow_implicit_invocation: true
