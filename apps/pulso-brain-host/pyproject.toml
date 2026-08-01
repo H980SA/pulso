@@ -1,0 +1,12 @@
+[project]
+name = "pulso-brain-host"
+version = "0.1.0"
+description = "Real LiteRT-LM Gemma HIL brain for PULSO"
+requires-python = ">=3.10"
+dependencies = [
+  "litert-lm-api==0.13.1",
+  "websockets>=15,<16"
+]
+
+[tool.unittest]
+start-directory = "tests"
