@@ -1,0 +1,6 @@
+interface:
+  display_name: 'Explain Starloop'
+  short_description: 'Understand Starloop, Crew, handoff, and effective usage.'
+  default_prompt: 'Use $explain-starloop to explain the relevant Starloop concept from the smallest necessary documentation references.'
+policy:
+  allow_implicit_invocation: true

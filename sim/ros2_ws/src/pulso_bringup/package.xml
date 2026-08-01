@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pulso_bringup</name>
+  <version>0.1.0</version>
+  <description>Single launch entry point for Pulso simulation.</description>
+  <maintainer email="pulso@example.invalid">Pulso Team</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>pulso_gazebo</exec_depend>
+  <exec_depend>pulso_safety</exec_depend>
+  <exec_depend>pulso_sim_adapter</exec_depend>
+  <exec_depend>pulso_visualization</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

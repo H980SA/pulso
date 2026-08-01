@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import argparse
 import base64
 from datetime import datetime, timezone
 from hashlib import sha256
@@ -20,6 +19,7 @@ from urllib.parse import parse_qs, unquote, urlsplit
 from uuid import uuid4
 
 from integrity import canonical, verify_chain
+from rover_control import RoverControlError, RoverControlProxy
 
 
 APP_ROOT = Path(__file__).resolve().parent
@@ -242,6 +242,7 @@ class SessionRepository:
 
 class MissionControlHandler(SimpleHTTPRequestHandler):
     repository: SessionRepository
+    rover_control: RoverControlProxy
     extensions_map = {
         **SimpleHTTPRequestHandler.extensions_map,
         ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8",
@@ -289,6 +290,9 @@ class MissionControlHandler(SimpleHTTPRequestHandler):
         path = urlsplit(self.path).path
         try:
             body = self._read_json()
+            if path == "/api/rover/stop":
+                self._json(self.rover_control.emergency_stop())
+                return
             if path == "/api/sessions":
                 value = self.repository.create_session(
                     str(body.get("mission_id", "M-001")), str(body.get("source", "UNKNOWN")),
@@ -309,6 +313,8 @@ class MissionControlHandler(SimpleHTTPRequestHandler):
             self._error(HTTPStatus.NOT_FOUND, "session not found")
         except (ValueError, json.JSONDecodeError) as failure:
             self._error(HTTPStatus.BAD_REQUEST, str(failure))
+        except RoverControlError as failure:
+            self._error(HTTPStatus.SERVICE_UNAVAILABLE, str(failure))
 
     def _read_json(self) -> dict[str, Any]:
         length = int(self.headers.get("Content-Length", "0"))
@@ -367,28 +373,17 @@ def default_state_dir() -> Path:
     return base / "pulso/mission-control"
 
 
-def build_server(bind: str, port: int, state_dir: Path) -> ThreadingHTTPServer:
+def build_server(
+    bind: str,
+    port: int,
+    state_dir: Path,
+    rover_control: RoverControlProxy | None = None,
+) -> ThreadingHTTPServer:
     repository = SessionRepository(state_dir)
-    handler = type("ConfiguredMissionControlHandler", (MissionControlHandler,), {"repository": repository})
+    handler = type(
+        "ConfiguredMissionControlHandler",
+        (MissionControlHandler,),
+        {"repository": repository, "rover_control": rover_control or RoverControlProxy.from_env()},
+    )
     return ThreadingHTTPServer((bind, port), handler)
 
-
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Serve PULSO mission control")
-    parser.add_argument("--bind", default="127.0.0.1")
-    parser.add_argument("--port", type=int, default=4173)
-    parser.add_argument("--state-dir", type=Path, default=default_state_dir())
-    args = parser.parse_args()
-    server = build_server(args.bind, args.port, args.state_dir)
-    print(f"PULSO mission control: http://{args.bind}:{args.port}/", flush=True)
-    print(f"PULSO session store: {args.state_dir}", flush=True)
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        server.server_close()
-
-
-if __name__ == "__main__":
-    main()

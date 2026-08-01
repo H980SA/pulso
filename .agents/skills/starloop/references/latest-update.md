@@ -1,30 +1,36 @@
 # Latest Starloop update
 
-Version: `1.1.0`
-Updated: `2026-07-23`
+Version: `1.2.0`
+Updated: `2026-07-25`
 
 Read this note once per session and change how you operate immediately. It summarizes the delta;
-`SKILL.md` and its domain references remain canonical.
+`SKILL.md` and its references remain canonical.
 
 ## Behavior changes
 
-- `starloop init --codex` installs the bundled web-image plugin automatically; a real
-  `starloop update` refreshes it from the current package.
-- When durable documentation is requested and no preference exists, ask whether the user wants
-  concise Markdown, visual documentation, or both. Recommend both for durable technical work.
-- Store accepted documentation under `.starloop/project/`; keep feature visuals under
-  `features/<slug>/visuals/` and cross-cutting visuals under `visuals/<slug>/`.
-- Generate or edit raster images through Starloop's bundled `$generate-web-image` ChatGPT web route.
-  Use built-in Codex ImageGen only after a disclosed definitive non-policy web failure.
-- Treat an explicit web-adapter test as diagnostic-only: report its exact status and `submitted`
-  value, then stop without ImageGen fallback unless the user requests it afterward.
-- Reuse Starloop's single private browser daemon across terminal and Codex contexts; never work
-  around `browser_busy` with `--isolated` or an automatic ImageGen fallback.
-- Inspect project branding and primary sources before visual generation, then verify every
-  downloaded artifact.
+- Crew is optional; Atlas decides contextually whether it materially helps an accepted cut, briefly
+  announces the choice, and honors the user's preference without applying a fixed checklist.
+- The current user-facing session remains Atlas across provider, `/model`, effort, native
+  compaction, goals, and cuts.
+- Forge, Scout, and read-only Observa are independent tmux teammates for one bounded cut, not
+  prompt-only subagents.
+- Durable tasks, leases, hooks, and events drive work. A non-model daemon wakes Atlas on useful
+  events; never poll with model-driven `sleep`.
+- Authority is `user > Atlas > Forge > Scout`. Forge has the normal technical tools inside the
+  accepted cut; Scout and Observa are mechanically restricted.
+- Inspect relevant current implementation before claiming what an existing feature does. Keep it
+  proportional; with Crew, use Scout when a read-only trace merits delegation.
+- Concurrent Atlas cuts use isolated Git worktrees. Release refuses unfinished, dirty, or
+  unintegrated work.
+- Handoff is independent of Crew. It selects one project Codex or Claude session and never reads
+  authentication or hidden reasoning.
+- `explain-starloop` routes questions to concise installed documentation.
+- The ChatGPT-web image route remains mandatory for raster generation; use built-in ImageGen only
+  after its skill permits and discloses a definitive-failure fallback.
+- Visual docs need an approved purpose and script; define jargon first and reject decoration.
 
 ## Update safety
 
-- `starloop update` may replace this managed note, the managed Starloop skill, its lock, and only
-  the marked `AGENTS.md` block.
+- `starloop update` may replace managed skills, their lock, bundled plugins, and only the marked
+  instruction block.
 - It must not overwrite `.starloop/project/**`, project source, dependencies, or neighboring skills.

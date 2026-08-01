@@ -21,16 +21,16 @@ Use raster generation when visual uncertainty is material:
 - Generate a small number of intentionally different directions from the same approved task constraints.
 - Use a few references and describe purpose, spatial relationships, fixed elements, and prohibited imitation.
 
-When raster generation is appropriate, invoke Starloop's bundled `$generate-web-image` skill as the
-mandatory default route. Tell the user that ChatGPT web preserves built-in Codex ImageGen usage,
-and follow the web skill's login, completion, download, and batch rules. A missing or disabled
-Starloop plugin is a setup state, not a definitive generation failure. Waiting for approval, login,
-generation, or an uncertain result is not a failure. Use built-in ImageGen only after a definitive
-non-policy web failure; disclose the reason and quota impact before fallback, label the result as a
-fallback, and never use it to bypass a safety refusal. When the task is explicitly testing,
-validating, bootstrapping, or diagnosing the web adapter, report the exact web status and
-`submitted` value, then stop without ImageGen fallback unless the user explicitly requests it after
-seeing that result.
+When raster generation is appropriate, invoke Starloop's bundled web-image skill as the mandatory
+default route: `$generate-web-image` in Codex or
+`/chatgpt-web-images:generate-web-image` in Claude Code. Follow its login, completion, download,
+and batch rules. In Codex, explain that ChatGPT web preserves built-in ImageGen usage; in Claude
+Code, explain that the plugin supplies raster generation through the user's ChatGPT subscription.
+A missing or disabled plugin is a setup state, not a definitive generation failure. Waiting for
+login, generation, or an uncertain result is not a failure. Codex may use built-in ImageGen only
+after a definitive non-policy web failure, with disclosure before fallback; Claude Code must stop
+and report that failure because it has no bundled raster fallback. Never bypass a safety refusal.
+For an explicit adapter test, report the exact web status and `submitted` value, then stop.
 
 When the raster is durable documentation rather than design exploration, load
 `references/documentation.md` from the Starloop skill and follow its format choice, project-owned

@@ -9,6 +9,7 @@ import { TacticalMap } from "./tactical-map.js";
 const params = new URLSearchParams(window.location.search);
 const replayId = params.get("session");
 const mode = replayId ? "REPLAY" : "LIVE";
+const profile = ["real", "sim"].includes(params.get("profile")) ? params.get("profile") : null;
 const bridgeUrl = resolveBridgeUrl(window.location);
 const store = createMissionStore({ mode });
 const tacticalMap = new TacticalMap(
@@ -44,7 +45,9 @@ setInterval(() => render(store.get()), 1000);
 installNavigation();
 installMapControls();
 installSelectionControls();
+installFieldControls();
 refreshSessions();
+installProfileBanner();
 
 if (replayId) startPersistedReplay(replayId);
 else if (params.get("autoconnect") !== "0") client.connect();
@@ -71,6 +74,19 @@ function installNavigation() {
     next.searchParams.set("view", button.dataset.viewTarget);
     history.replaceState(null, "", next);
   });
+}
+
+function installProfileBanner() {
+  if (!profile || replayId) return;
+  const banner = document.getElementById("mode-banner");
+  banner.hidden = false;
+  banner.textContent = profile === "real"
+    ? "ENTORNO REAL · S25 / ANDROID_REAL · ROS 9091"
+    : "ENTORNO SIMULACIÓN · GAZEBO_HIL · ROS 9092";
+  document.body.dataset.profile = profile;
+  if (profile === "sim") {
+    document.querySelector(".field-controls").hidden = true;
+  }
 }
 
 function setActiveView(name) {
@@ -131,6 +147,50 @@ function installSelectionControls() {
     url.searchParams.set("view", "timeline");
     window.location.assign(url);
   });
+}
+
+function installFieldControls() {
+  const status = document.getElementById("field-control-status");
+  const arm = document.getElementById("field-arm");
+  const auto = document.getElementById("field-auto");
+  const stop = document.getElementById("field-stop");
+  arm.addEventListener("click", () => sendOperatorCommand("ARM_ROVER", "HABILITACIÓN ENVIADA"));
+  auto.addEventListener("click", () => sendOperatorCommand("START_AUTONOMY", "MISIÓN SOLICITADA"));
+  stop.addEventListener("click", async () => {
+    stop.disabled = true;
+    status.textContent = "DETENIENDO…";
+    let phoneStop = false;
+    try {
+      client.publishOperatorCommand("STOP_ALL");
+      phoneStop = true;
+    } catch (error) {
+      console.warn("S25 stop channel:", error.message);
+    }
+    try {
+      const response = await fetch("/api/rover/stop", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: "{}",
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      status.textContent = phoneStop ? "STOP + E-STOP ENVIADOS" : "E-STOP DEL GATEWAY ENVIADO";
+    } catch (error) {
+      status.textContent = phoneStop ? "STOP S25 ENVIADO · GATEWAY SIN CONFIRMAR" : "STOP NO CONFIRMADO";
+      console.error("Gateway e-stop:", error);
+    } finally {
+      stop.disabled = false;
+    }
+  });
+
+  function sendOperatorCommand(command, label) {
+    try {
+      client.publishOperatorCommand(command);
+      status.textContent = label;
+    } catch (error) {
+      status.textContent = "S25 SIN ENLACE";
+      console.error(error);
+    }
+  }
 }
 
 function setTimelineFilter(filter) {

@@ -1,26 +1,80 @@
 .DS_Store
-.idea/
-.vscode/
+._*
+__pycache__/
+*.py[cod]
 
+# Project-local runtimes and third-party source snapshots.
+.tools/
+/tools/
+/vendor/
+/models/
+*.litertlm
+*.onnx
+*.tflite
+*.pt
+*.pth
+
+# Required, pinned perception asset shared by Android and the simulator.
+!apps/pulso-android/app/src/main/assets/models/yolo11n_pose.onnx
+
+# Secrets and machine-local configuration.
+.mcp.json
 .env
 .env.*
-*.key
+!.env.example
 *.pem
-local.properties
+*.key
+*.p12
+*.jks
+secrets/
+credentials/
+**/local.properties
 
-__pycache__/
-*.pyc
-*.log
+# Starloop runtime/project memory is user-owned and machine-local.
+.starloop/
 
-build/
-dist/
-.gradle/
+# Local Android configuration and generated output.
+apps/pulso-android/local.properties
+apps/pulso-android/.gradle/
+apps/pulso-android/**/build/
+apps/pulso-android/captures/
+*.apk
 
+# Heavy Blender and simulation artifacts stay local.
+art/assets/downloads/
+art/cache/
+art/exports/
+art/claude_workspace/*.blend
+art/claude_workspace/*.blend1
+art/claude_workspace/*.blend2
+art/claude_workspace/renders/
+art/claude_workspace/exports/
+art/checkpoints/
+art/current/exports/
+art/current/pulso_disaster_world_current.blend
+art/current/ragdoll/canonical/*.blend
+art/current/ragdoll/seed_*/
+art/**/*.blend1
+art/**/*.blend2
+
+# ROS / Gazebo generated output.
 sim/ros2_ws/build/
 sim/ros2_ws/install/
 sim/ros2_ws/log/
+sim/logs/
 
-models/
-*.litertlm
-*.onnx
-*.apk
+# Runtime state never belongs to the source tree.
+/logs/
+/pids/
+/.releases/
+*.pid
+*.log
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+
+# Generated simulator assets and downloaded vendor checkouts.
+sim/generated/
+
+# Local handoff binaries copied from the Ubuntu builder.
+dist/

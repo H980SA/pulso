@@ -22,6 +22,22 @@ Turn an approved product outcome into the smallest implementation-ready decision
 9. Define acceptance, unit, integration, contract, security, end-to-end, failure, performance, and UX evidence proportionally to risk.
 10. Define observability, rollout, migration, compatibility, rollback, and removal conditions.
 
+## Continue an implemented feature from evidence
+
+When a request names an existing feature or asserts current behavior, treat the claim as unverified
+until inspected in the current checkout. Locate the relevant executable path, then follow only the
+callers, state, persistence, configuration, consumers, tests, or runtime behavior needed to answer
+the question safely. Documentation and memory are useful leads, not proof. Tests describe intended
+or protected behavior; claim runtime behavior only when proportionate runtime evidence supports it.
+
+Keep the investigation proportional. Stop when the requested claim is supported or the remaining
+uncertainty is clear. Explain the result naturally instead of forcing every feature into a taxonomy.
+
+With active Crew, Atlas should use read-only Scout when the trace is substantial enough to benefit
+from delegation; a quick local check can remain with Atlas. Scout returns locations, flow,
+evidence, contradictions, and uncertainty. Atlas validates material evidence and owns conclusions
+or design decisions. Atlas or Forge performs proof that needs writes or mutable runtime access.
+
 ## Pressure-test the proposal
 
 Select relevant scenarios instead of asking all of them:

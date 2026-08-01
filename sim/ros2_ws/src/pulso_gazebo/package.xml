@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pulso_gazebo</name>
+  <version>0.1.0</version>
+  <description>Gazebo Fortress physics and sensors for the Pulso OpenBot cut.</description>
+  <maintainer email="pulso@example.invalid">Pulso Team</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <test_depend>ament_cmake_pytest</test_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>pulso_arcore_emulator</exec_depend>
+  <exec_depend>pulso_description</exec_depend>
+  <exec_depend>pulso_hil</exec_depend>
+  <exec_depend>pulso_navigation</exec_depend>
+  <exec_depend>pulso_safety</exec_depend>
+  <exec_depend>pulso_sim_adapter</exec_depend>
+  <exec_depend>pointcloud_to_laserscan</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>rosbridge_server</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

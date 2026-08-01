@@ -1,0 +1,84 @@
+{
+  "contract": "pulso.openbot-visual-lod.v1",
+  "blender_version": "5.2.0 LTS",
+  "decimate_ratio": 0.25,
+  "purpose": "visual-only; never use these triangle meshes as dynamic collision",
+  "parts": [
+    {
+      "part": "body_bottom",
+      "source": "body_bottom.stl",
+      "source_sha256": "ce1c731227c58ae2ab08eaaad873a5a7c827324e08a8c5f7c51095770ff26e61",
+      "source_bytes": 3382384,
+      "source_triangles": 67646,
+      "source_bounds_mm": {
+        "min": [
+          -106.00001525878906,
+          -67.0,
+          -2.2856211687833847e-14
+        ],
+        "max": [
+          134.00001525878906,
+          83.0,
+          29.500001907348633
+        ]
+      },
+      "lod": "body_bottom_visual_lod25.stl",
+      "lod_sha256": "d674bf7ed1dbcc235efe277a4d35b42038b3a709ec137dfe4f7a37a5d31658c2",
+      "lod_bytes": 845584,
+      "lod_triangles": 16910,
+      "lod_bounds_mm": {
+        "min": [
+          -105.99739837646484,
+          -66.98664093017578,
+          -0.00037490413524210453
+        ],
+        "max": [
+          133.99740600585938,
+          82.98664093017578,
+          29.4903621673584
+        ]
+      }
+    },
+    {
+      "part": "body_top",
+      "source": "body_top.stl",
+      "source_sha256": "bb5980f637e91d08b404ad94e34b6502335b1c06c66a9979f24980d49aaf61af",
+      "source_bytes": 2972284,
+      "source_triangles": 59444,
+      "source_bounds_mm": {
+        "min": [
+          -115.0,
+          -64.99999237060547,
+          -1.1920928955078125e-07
+        ],
+        "max": [
+          125.0,
+          85.00000762939453,
+          6.0
+        ]
+      },
+      "lod": "body_top_visual_lod25.stl",
+      "lod_sha256": "4837862d3cc6e300c7af03ed9f67bdd12981a45735592201dc75ec95836df321",
+      "lod_bytes": 743084,
+      "lod_triangles": 14860,
+      "lod_bounds_mm": {
+        "min": [
+          -115.003662109375,
+          -64.99364471435547,
+          -7.971399099915288e-06
+        ],
+        "max": [
+          125.003662109375,
+          84.98985290527344,
+          6.000214576721191
+        ]
+      }
+    }
+  ],
+  "totals": {
+    "source_triangles": 127090,
+    "lod_triangles": 31770,
+    "source_bytes": 6354668,
+    "lod_bytes": 1588668
+  }
+}

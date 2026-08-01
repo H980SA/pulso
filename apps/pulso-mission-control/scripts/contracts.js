@@ -24,7 +24,7 @@ export const SUBSCRIPTIONS = Object.freeze([
   [ROS_TOPICS.actionResult, "std_msgs/msg/String", 0],
   [ROS_TOPICS.metaView, "sensor_msgs/msg/CompressedImage", 250],
   [ROS_TOPICS.metaViewScene, "std_msgs/msg/String", 0],
-  [ROS_TOPICS.camera, "sensor_msgs/msg/CompressedImage", 250],
+  [ROS_TOPICS.camera, "sensor_msgs/msg/CompressedImage", 80],
   [ROS_TOPICS.phoneTelemetry, "std_msgs/msg/String", 250],
   // The physical S25 publishes the auditable JSON contract while Gazebo owns
   // this same parity topic as sensor_msgs/CameraInfo. Omit the requested type

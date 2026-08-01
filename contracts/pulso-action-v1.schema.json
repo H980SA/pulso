@@ -26,7 +26,8 @@
         "LISTEN",
         "SET_MISSION_FOCUS",
         "UPSERT_HYPOTHESIS",
-        "LOAD_SKILL"
+        "LOAD_SKILL",
+        "COMPLETE_MISSION"
       ]
     },
     "target": {

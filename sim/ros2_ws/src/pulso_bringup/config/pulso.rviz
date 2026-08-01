@@ -1,0 +1,458 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Environment1
+        - /Phone Sensors1
+        - /Pulso Decisions1
+        - /Live Camera Feeds1
+      Splitter Ratio: 0.55
+    Tree Height: 720
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: MetaView
+Preferences:
+  PromptSaveOnExit: false
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 0.2
+          Cell Size: 0.5
+          Class: rviz_default_plugins/Grid
+          Color: 70; 82; 105
+          Enabled: true
+          Line Style:
+            Line Width: 0.02
+            Value: Lines
+          Name: Metric Grid
+          Normal Cell Count: 0
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Plane: XY
+          Plane Cell Count: 40
+          Reference Frame: <Fixed Frame>
+          Value: true
+        - Alpha: 0.88
+          Class: rviz_default_plugins/Map
+          Color Scheme: map
+          Draw Behind: true
+          Enabled: true
+          Name: Discovered SLAM Map
+          Topic:
+            Depth: 1
+            Durability Policy: Transient Local
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /map
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Class: rviz_default_plugins/RobotModel
+          Collision Enabled: false
+          Description File: ""
+          Description Source: Topic
+          Description Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /robot_description
+          Enabled: true
+          Links:
+            All Links Enabled: true
+            Expand Joint Details: false
+            Expand Link Details: false
+            Expand Tree: false
+            Link Tree Style: Links in Alphabetic Order
+          Mass Properties:
+            Inertia: false
+            Mass: false
+          Name: OpenBot + S25
+          TF Prefix: ""
+          Update Interval: 0
+          Value: true
+          Visual Enabled: true
+        - Class: rviz_default_plugins/TF
+          Enabled: true
+          Frame Timeout: 15
+          Frames:
+            All Enabled: true
+          Marker Scale: 0.12
+          Name: TF / Sensor Frames
+          Show Arrows: false
+          Show Axes: false
+          Show Names: false
+          Tree: {}
+          Update Interval: 0
+          Value: true
+      Enabled: true
+      Name: Environment
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 0.62
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 0; 200; 255
+          Color Transformer: AxisColor
+          Decay Time: 1
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 80; 20
+          Max Intensity: 4096
+          Min Color: 0; 90; 255
+          Min Intensity: 0
+          Name: Dense ARCore Depth Cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.025
+          Style: Flat Squares
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /pulso/phone/depth/points
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.85
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 0; 255; 210
+          Color Transformer: FlatColor
+          Decay Time: 2
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 0; 255; 210
+          Max Intensity: 4096
+          Min Color: 0; 255; 210
+          Min Intensity: 0
+          Name: Sparse VIO Feature Points
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.035
+          Style: Spheres
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /pulso/phone/arcore/feature_points
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: true
+        - Alpha: 0.62
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/LaserScan
+          Color: 255; 70; 30
+          Color Transformer: FlatColor
+          Decay Time: 0.5
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 70; 30
+          Max Intensity: 0
+          Min Color: 255; 70; 30
+          Min Intensity: 0
+          Name: Collision Scan
+          Position Transformer: XYZ
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.025
+          Style: Flat Squares
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /pulso/navigation/scan
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: true
+        - Alpha: 0.25
+          Class: rviz_default_plugins/Range
+          Color: 255; 165; 20
+          Enabled: true
+          Name: Front Safety Sonar
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/base/sonar/front
+          Value: true
+        - Angle Tolerance: 0.05
+          Class: rviz_default_plugins/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.25
+              Color: 130; 180; 255
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: false
+            Position:
+              Alpha: 0.2
+              Color: 40; 160; 255
+              Scale: 1
+              Value: false
+            Value: false
+          Enabled: true
+          Keep: 80
+          Name: VIO Pose
+          Position Tolerance: 0.03
+          Shape:
+            Alpha: 1
+            Axes Length: 0.2
+            Axes Radius: 0.02
+            Color: 35; 180; 255
+            Head Length: 0.08
+            Head Radius: 0.035
+            Shaft Length: 0.18
+            Shaft Radius: 0.018
+            Value: Arrow
+          Topic:
+            Depth: 10
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/phone/vio/odom
+          Value: true
+      Enabled: true
+      Name: Phone Sensors
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: true
+          Name: Candidate Routes A/B/C
+          Namespaces: {}
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/navigation/candidate_markers
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz_default_plugins/Path
+          Color: 255; 220; 0
+          Enabled: true
+          Head Diameter: 0.06
+          Head Length: 0.08
+          Length: 0.12
+          Line Style: Lines
+          Line Width: 0.075
+          Name: Selected Route (Planner Harness)
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0.025
+          Pose Color: 255; 245; 80
+          Pose Style: None
+          Radius: 0.03
+          Shaft Diameter: 0.02
+          Shaft Length: 0.08
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/navigation/selected_path
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz_default_plugins/Path
+          Color: 255; 40; 210
+          Enabled: true
+          Head Diameter: 0.05
+          Head Length: 0.07
+          Length: 0.1
+          Line Style: Lines
+          Line Width: 0.055
+          Name: Executed Trajectory
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0.035
+          Pose Color: 255; 40; 210
+          Pose Style: None
+          Radius: 0.025
+          Shaft Diameter: 0.015
+          Shaft Length: 0.06
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/navigation/executed_trajectory
+          Value: true
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: true
+          Name: Safety + Mission + IMU Telemetry
+          Namespaces: {}
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/visualization/status_markers
+          Value: true
+      Enabled: true
+      Name: Pulso Decisions
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_default_plugins/Image
+          Enabled: true
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: RGB
+          Normalize Range: true
+          Queue Size: 3
+          Topic:
+            Depth: 3
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/phone/rgb/image
+          Value: true
+        - Class: rviz_default_plugins/Image
+          Enabled: true
+          Max Value: 5000
+          Median window: 5
+          Min Value: 80
+          Name: Depth
+          Normalize Range: true
+          Queue Size: 3
+          Topic:
+            Depth: 3
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/phone/depth/smoothed
+          Value: true
+        - Class: rviz_default_plugins/Image
+          Enabled: true
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: MetaView
+          Normalize Range: true
+          Queue Size: 3
+          Topic:
+            Depth: 3
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pulso/navigation/metaview
+          Value: true
+      Enabled: true
+      Name: Live Camera Feeds
+  Enabled: true
+  Global Options:
+    Background Color: 5; 8; 15
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 255; 220; 0
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Angle: -1.5708
+      Class: rviz_default_plugins/TopDownOrtho
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.01
+      Scale: 88.30975341796875
+      Target Frame: <Fixed Frame>
+      Value: TopDownOrtho (rviz_default_plugins)
+      X: 3.620832920074463
+      Y: 0
+    Saved: ~
+Window Geometry:
+  Depth:
+    collapsed: false
+  Displays:
+    collapsed: false
+  Height: 1016
+  Hide Left Dock: false
+  Hide Right Dock: false
+  MetaView:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd000000010000000000000140000003a2fc0200000006fb00000010004d0065007400610056006900650077010000003b000001340000002800fffffffb0000000a0044006500700074006801000001750000012e0000002800fffffffb0000000600520047004201000002a9000001340000002800fffffffb000000100044006900730070006c006100790073000000029600000147000000c700fffffffb0000000a00560069006500770073000000032e000000af000000a000fffffffb0000000800540069006d006500000003a5000000380000003700ffffff000005f4000003a200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  RGB:
+    collapsed: false
+  Time:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1850
+  X: 70
+  Y: 27

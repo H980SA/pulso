@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="pulso_openbot_visual_assets">
+    <static>true</static>
+    <!-- Resource-only model. The dynamic links, sensors, and collision shapes
+         are defined in worlds/pulso_disaster.sdf. -->
+    <link name="resource_anchor"/>
+  </model>
+</sdf>

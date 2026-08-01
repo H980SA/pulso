@@ -1,8 +1,8 @@
 # PULSO Mission Control
 
-Cockpit web observacional para simulación y S25 físico. No publica acciones.
-Consume únicamente evidencia live; si un tópico falta muestra `WAITING` y no
-inyecta replay ni resultados ficticios.
+Cockpit web para simulación y S25 físico. Consume únicamente evidencia live; si
+un tópico falta muestra `WAITING` y no inyecta replay ni resultados ficticios.
+En el perfil real publica solo el contrato operador acotado y `PARAR TODO`.
 
 ## Ejecutar
 
@@ -14,11 +14,15 @@ Use la CLI desde la raíz:
 ./pulso real
 ```
 
-Abra:
+Abra el perfil correspondiente:
 
 ```text
-http://127.0.0.1:4173/?bridge=ws://127.0.0.1:9091
+REAL http://127.0.0.1:4173/?profile=real&bridge=ws://127.0.0.1:9091
+SIM  http://127.0.0.1:4174/?profile=sim&bridge=ws://127.0.0.1:9092
 ```
+
+REAL usa `ROS_DOMAIN_ID=42`; SIM usa `ROS_DOMAIN_ID=43`. Cada servidor conserva
+su propio SQLite y sus artefactos, de modo que las grabaciones no se mezclan.
 
 En `real`, el teléfono llega al bridge local mediante `adb reverse`. Mission
 Control no necesita acceso de red externo.

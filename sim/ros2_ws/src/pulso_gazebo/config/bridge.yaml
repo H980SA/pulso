@@ -1,0 +1,65 @@
+- ros_topic_name: /clock
+  gz_topic_name: /clock
+  ros_type_name: rosgraph_msgs/msg/Clock
+  gz_type_name: gz.msgs.Clock
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/phone/rgb/image
+  gz_topic_name: /pulso/sim/phone/rgb
+  ros_type_name: sensor_msgs/msg/Image
+  gz_type_name: gz.msgs.Image
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/phone/rgb/camera_info
+  gz_topic_name: /pulso/sim/phone/camera_info
+  ros_type_name: sensor_msgs/msg/CameraInfo
+  gz_type_name: gz.msgs.CameraInfo
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/sim/phone/depth_clean
+  gz_topic_name: /pulso/sim/phone/depth_clean
+  ros_type_name: sensor_msgs/msg/Image
+  gz_type_name: gz.msgs.Image
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/phone/depth/camera_info
+  gz_topic_name: /pulso/sim/phone/depth_clean/camera_info
+  ros_type_name: sensor_msgs/msg/CameraInfo
+  gz_type_name: gz.msgs.CameraInfo
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/phone/imu/data_raw
+  gz_topic_name: /pulso/sim/phone/imu
+  ros_type_name: sensor_msgs/msg/Imu
+  gz_type_name: gz.msgs.IMU
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/sim/ground_truth/odom
+  gz_topic_name: /pulso/sim/ground_truth/odom
+  ros_type_name: nav_msgs/msg/Odometry
+  gz_type_name: gz.msgs.Odometry
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/base/wheel/odom
+  gz_topic_name: /pulso/sim/wheel_encoder/odom
+  ros_type_name: nav_msgs/msg/Odometry
+  gz_type_name: gz.msgs.Odometry
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/base/cmd_vel_safe
+  gz_topic_name: /pulso/base/cmd_vel_safe
+  ros_type_name: geometry_msgs/msg/Twist
+  gz_type_name: gz.msgs.Twist
+  direction: ROS_TO_GZ
+
+- ros_topic_name: /pulso/sim/base/front_scan
+  gz_topic_name: /pulso/sim/base/front_scan
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: gz.msgs.LaserScan
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /pulso/sim/base/bumper_contacts
+  gz_topic_name: /pulso/sim/base/bumper_contacts
+  ros_type_name: ros_gz_interfaces/msg/Contacts
+  gz_type_name: gz.msgs.Contacts
+  direction: GZ_TO_ROS

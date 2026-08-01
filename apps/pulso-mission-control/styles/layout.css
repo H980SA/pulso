@@ -26,6 +26,14 @@
 .primary-nav button[aria-current="page"]::after { content: ""; position: absolute; inset: auto 12px -1px; height: 2px; background: var(--orange); }
 .primary-nav button:hover, .quiet-action:hover { color: var(--orange); background: var(--orange-soft); }
 
+.field-controls { position: fixed; z-index: 30; right: 18px; bottom: 44px; display: flex; align-items: center; gap: 8px; padding: 8px; border: var(--hairline); background: rgba(255,255,255,.96); box-shadow: 0 8px 30px rgba(18,18,18,.12); }
+.field-controls span { min-width: 118px; color: var(--ink-soft); font: 600 .55rem/1.2 var(--font-mono); }
+.field-controls button { min-height: 38px; padding: 0 14px; border: 1px solid var(--ink); background: #fff; cursor: pointer; font: 700 .58rem/1 var(--font-mono); letter-spacing: .03em; }
+.field-controls button:hover { color: var(--orange); border-color: var(--orange); }
+.field-controls #field-stop { color: #fff; border-color: #d2261d; background: #d2261d; }
+.field-controls #field-stop:hover { background: #a91610; }
+.replay-mode .field-controls { display: none; }
+
 .top-status { display: flex; }
 .top-status div { min-width: 112px; display: grid; align-content: center; padding: 8px 14px; border-left: var(--hairline); }
 .top-status dd::before { content: ""; width: 7px; height: 7px; display: inline-block; margin-right: 8px; border-radius: 50%; background: currentColor; }

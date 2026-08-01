@@ -1,0 +1,476 @@
+{
+  "contract": "pulso.blender-gazebo-export.v1",
+  "runtime_coordinate_frame": {
+    "source": "Blender world XYZ",
+    "obj_forward_axis": "Y",
+    "obj_up_axis": "Z",
+    "preserves_source_xy": true
+  },
+  "blender_version": "5.2.0 LTS",
+  "source": "art/current/ragdoll/navigable/pulso_ragdoll_navigable.blend",
+  "source_sha256": "511f710b3dde74785358ff1631a6d0f876b73138c826410224a20862b0079b19",
+  "visual_collections": [
+    "VISUAL_ARCH",
+    "VISUAL_DEBRIS_STATIC",
+    "VISUAL_DETAIL",
+    "VISUAL_NAVIGATION",
+    "VISUAL_RAGDOLL",
+    "VISUAL_SURVIVORS"
+  ],
+  "collision_collections": [
+    "COLLISION_ARCH",
+    "COLLISION_DEBRIS_STATIC",
+    "COLLISION_NAVIGATION"
+  ],
+  "visual": {
+    "objects": 504,
+    "source_vertices": 68434,
+    "source_polygons": 65201
+  },
+  "runtime_visual_batching": {
+    "objects": 1,
+    "material_slots": 33,
+    "reason": "Ogre2 material/texture instance budget"
+  },
+  "runtime_textures": {
+    "max_dimension": 1024,
+    "source_blend_unchanged": true,
+    "files": [
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/BootsAnkle-norm.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 711744
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/BootsAnkle.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 414409
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/BootsAnkleM.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 452176
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/CrudeFemaleTshirtDiffuse.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 86293
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/Pants_wool.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 297496
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/Polo_Base_Color.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 478761
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/brown_eye.png",
+        "source_size": [
+          1024,
+          1024
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 610817
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/cargo_pants_diff.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 628912
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/cargo_pants_norm.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 1132499
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/concrete_wall_005_Diffuse_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 144177
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/concrete_wall_005_Rough_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 37633
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/concrete_wall_005_nor_gl_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 215507
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/damaged_concrete_floor_02_Diffuse_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 114052
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/damaged_concrete_floor_02_Rough_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 58975
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/damaged_concrete_floor_02_nor_gl_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 226426
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/eyebrow001.png",
+        "source_size": [
+          512,
+          512
+        ],
+        "runtime_size": [
+          512,
+          512
+        ],
+        "bytes": 89619
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/eyebrow003.png",
+        "source_size": [
+          512,
+          512
+        ],
+        "runtime_size": [
+          512,
+          512
+        ],
+        "bytes": 92174
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/eyelashes01.png",
+        "source_size": [
+          512,
+          512
+        ],
+        "runtime_size": [
+          512,
+          512
+        ],
+        "bytes": 91600
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/eyelashes02.png",
+        "source_size": [
+          512,
+          512
+        ],
+        "runtime_size": [
+          512,
+          512
+        ],
+        "bytes": 132278
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/metal_plate_02_Diffuse_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 203065
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/metal_plate_02_Rough_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 446411
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/metal_plate_02_nor_gl_2k.jpg",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 54753
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/short01_diffuse.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 998772
+      },
+      {
+        "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/short03_diffuse.png",
+        "source_size": [
+          2048,
+          2048
+        ],
+        "runtime_size": [
+          1024,
+          1024
+        ],
+        "bytes": 946820
+      }
+    ]
+  },
+  "collision": {
+    "objects": 154,
+    "source_vertices": 1232,
+    "source_polygons": 924
+  },
+  "files": [
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/pulso_disaster_collision.obj",
+      "bytes": 119526,
+      "sha256": "61469bbffb113a488e2f7cebcdaf32e45ea65bf2d7b9ff21347e9092cad2a7eb"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/pulso_disaster_visual.glb",
+      "bytes": 13730580,
+      "sha256": "c1bd1cda5960ef55903893944049d31b9acb44c4f262a5d184efcec6f12af254"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/pulso_disaster_visual.mtl",
+      "bytes": 9986,
+      "sha256": "6f77ac3e3a4d1f6db4c99e10bac86ba2e147f533351accf80e115a3b41f7a75c"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/pulso_disaster_visual.obj",
+      "bytes": 8557233,
+      "sha256": "0e56a3110708358e84b89707365954b921c7782e2f2dfc095f3043ed01131316"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/BootsAnkle-norm.png",
+      "bytes": 711744,
+      "sha256": "973b519f09bb43f6dd8a33a7d760a1240fd0e98437cb1a7ff71ff676178c530c"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/BootsAnkle.png",
+      "bytes": 414409,
+      "sha256": "b755a08f36ad382155bc3a5d0d50bf99faa9d8c94518d79dc956d0662b247a82"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/BootsAnkleM.png",
+      "bytes": 452176,
+      "sha256": "a348a9620ba010d2da57a1759bfc4455c9a28aa9067d09f47aa553bb9cf9a852"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/CrudeFemaleTshirtDiffuse.png",
+      "bytes": 86293,
+      "sha256": "e9338a4885067a0953b434a2102a19c71f88169a4f555a5e1c0ab898463c3a10"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/Pants_wool.png",
+      "bytes": 297496,
+      "sha256": "4691a20b9f69c9a0cda3faff359f09edec00d069287d7e4469ce4c30512af82d"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/Polo_Base_Color.png",
+      "bytes": 478761,
+      "sha256": "14b1e1229c8513ebf3f1faaa6c19093784d2d4f551ab488f0db21d27056713b3"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/brown_eye.png",
+      "bytes": 610817,
+      "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/cargo_pants_diff.png",
+      "bytes": 628912,
+      "sha256": "398a6e19a657ae8ab35cd72d08dce6cb103022927d538dccee5410d78161dcb7"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/cargo_pants_norm.png",
+      "bytes": 1132499,
+      "sha256": "6e024295e24ad8edc5981d0707f850b4654f032873f5ed5674e1b2701a798d1d"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/concrete_wall_005_Diffuse_2k.jpg",
+      "bytes": 144177,
+      "sha256": "d874178d6b20b11e65615a18fd7945dc510685ff78835573228a920981a10a79"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/concrete_wall_005_Rough_2k.jpg",
+      "bytes": 37633,
+      "sha256": "bba8a024991eae9920bf7a15a8503c8f6d5fe1cd22fcbe5eda02b0f20d2e7433"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/concrete_wall_005_nor_gl_2k.jpg",
+      "bytes": 215507,
+      "sha256": "1f285a13895d9947e48a466a7eaa40cae5cbd1aee47ff6325bd405f421a9bdbf"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/damaged_concrete_floor_02_Diffuse_2k.jpg",
+      "bytes": 114052,
+      "sha256": "69f6d9ae51f8b8c4e2b9f9176ae62e025a2ecf867efaa8b770dbaa78320e990d"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/damaged_concrete_floor_02_Rough_2k.jpg",
+      "bytes": 58975,
+      "sha256": "d08b3c7af5ce3449a994cb1bd74a4bf2f80890389c74b776c87c7a2af55b7eb8"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/damaged_concrete_floor_02_nor_gl_2k.jpg",
+      "bytes": 226426,
+      "sha256": "445cbea0cc652aaced9e0ef1d85990fbded1d96797381a7b0ce462dc3a311c31"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/eyebrow001.png",
+      "bytes": 89619,
+      "sha256": "9940f7d0b1b223709a19b05156ba6f6e9e4dbdbced02d7574f4d51d72c58967b"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/eyebrow003.png",
+      "bytes": 92174,
+      "sha256": "e98837d77247f2c11a8259f8b265243b9053ba55683bd70223c668110e7dfb62"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/eyelashes01.png",
+      "bytes": 91600,
+      "sha256": "4b69c0fff2648874460e9caf80c31413c444218a5c50afebc425aeaa65484a35"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/eyelashes02.png",
+      "bytes": 132278,
+      "sha256": "6375eb8934d86d49eb2a37589e179614fb557dd92a772ced11e269ad6d72d79d"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/metal_plate_02_Diffuse_2k.jpg",
+      "bytes": 203065,
+      "sha256": "01f517f21fef68bb5847f1d5eaef11c874d45275320911801019db856261238a"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/metal_plate_02_Rough_2k.jpg",
+      "bytes": 446411,
+      "sha256": "ff0080e0d797bab3ac0d49156c01a158b3af29c8657561f7c413b7272841b9dd"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/metal_plate_02_nor_gl_2k.jpg",
+      "bytes": 54753,
+      "sha256": "56c275f1f86339a801d0d2b27dcc7805d6f2cfb387078f887aa15d2e1681d1ab"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/short01_diffuse.png",
+      "bytes": 998772,
+      "sha256": "e465613d4915b11f9e799971415c9aa8e0058fa16b0ff93d2c5e4bf4a8f93f2a"
+    },
+    {
+      "path": "sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/textures/short03_diffuse.png",
+      "bytes": 946820,
+      "sha256": "49050ed049b28c436df173e20e1cbc5576aaa2aadd3ddc53cb9580e36ad8b67e"
+    }
+  ]
+}

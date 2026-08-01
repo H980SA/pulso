@@ -1,0 +1,15 @@
+# Canonical runtime meshes are large but required by a fresh simulation clone.
+sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/*.dae filter=lfs diff=lfs merge=lfs -text
+sim/ros2_ws/src/pulso_gazebo/models/pulso_disaster_scene/meshes/*.glb filter=lfs diff=lfs merge=lfs -text
+
+# Only accepted Blender sources use LFS; checkpoints, exports and legacy seeds
+# are excluded in .gitignore.
+art/current/pulso_disaster_world_current.blend filter=lfs diff=lfs merge=lfs -text
+art/current/ragdoll/canonical/*.blend filter=lfs diff=lfs merge=lfs -text
+art/current/ragdoll/navigable/pulso_ragdoll_navigable.blend filter=lfs diff=lfs merge=lfs -text
+
+# The exact detector model is required for a clean-clone demo.
+apps/pulso-android/app/src/main/assets/models/yolo11n_pose.onnx filter=lfs diff=lfs merge=lfs -text
+
+*.sh text eol=lf
+pulso text eol=lf

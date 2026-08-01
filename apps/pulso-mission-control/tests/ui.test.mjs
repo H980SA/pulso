@@ -23,6 +23,13 @@ test("interactive canvas surfaces and controls have accessible names", () => {
   }
 });
 
+test("field console exposes explicit enable, mission start and stop-all controls", () => {
+  for (const id of ["field-arm", "field-auto", "field-stop"]) {
+    assert.match(html, new RegExp(`<button[^>]+id="${id}"`));
+  }
+  assert.match(html, /id="field-stop"[^>]*>PARAR TODO<\/button>/);
+});
+
 test("brain timeline exposes an explicit all-versus-Gemma-only audit filter", () => {
   assert.match(html, /id="timeline-filter-all"[^>]*>TODOS<\/button>/);
   assert.match(html, /id="timeline-filter-gemma"[^>]*>SOLO GEMMA<\/button>/);
@@ -48,7 +55,7 @@ test("every getElementById dependency exists in the document", () => {
 });
 
 test("handwritten production modules stay below 400 lines", () => {
-  const files = ["server.py", "scripts/contracts.js", "scripts/main.js", "scripts/render.js", "scripts/rosbridge.js", "scripts/session-api.js", "scripts/spatial-map.js", "scripts/store.js", "scripts/tactical-map.js"];
+  const files = ["server.py", "serve.py", "rover_control.py", "scripts/contracts.js", "scripts/main.js", "scripts/render.js", "scripts/rosbridge.js", "scripts/session-api.js", "scripts/spatial-map.js", "scripts/store.js", "scripts/tactical-map.js"];
   for (const file of files) {
     const lines = readFileSync(resolve(root, file), "utf8").split("\n").length - 1;
     assert.ok(lines < 400, `${file} has ${lines} lines`);

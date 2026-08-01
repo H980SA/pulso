@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="pulso_disaster_scene">
+    <static>true</static>
+    <link name="scene">
+      <visual name="visual">
+        <!-- Fortress cannot load the modern GLB artifact. This direct Blender
+             Collada export preserves the accepted geometry, material groups,
+             UVs and bounded diffuse textures without Assimp's broken polylist
+             conversion. The OBJ remains a geometry/debug fallback. -->
+        <geometry><mesh><uri>meshes/pulso_disaster_visual.dae</uri></mesh></geometry>
+      </visual>
+      <collision name="architecture_collision">
+        <geometry><mesh><uri>meshes/pulso_disaster_collision.obj</uri></mesh></geometry>
+        <surface><friction><ode><mu>0.9</mu><mu2>0.75</mu2></ode></friction></surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

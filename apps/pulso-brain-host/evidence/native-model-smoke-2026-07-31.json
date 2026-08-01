@@ -1,0 +1,36 @@
+{
+  "evidence_version": "pulso.native-model-smoke.v1",
+  "captured_on": "2026-07-31",
+  "scope": "Native LiteRT-LM multimodal and structured tool-call boundary; this is not a physical navigation result.",
+  "runtime": {
+    "package": "litert-lm-api",
+    "package_version": "0.13.1",
+    "python": "3.13",
+    "backend": "GPU",
+    "model_file": ".tools/models/gemma-4-E2B-it.litertlm",
+    "model_bytes": 2588147712,
+    "model_sha256": "181938105e0eefd105961417e8da75903eacda102c4fce9ce90f50b97139a63c"
+  },
+  "visual_input": {
+    "source_at_test_time": "/tmp/pulso-metaview-live-v3.png",
+    "dimensions_px": [800, 800],
+    "bytes": 136524,
+    "sha256": "1cf14cd8b980a1709fbcaa4015ea0908f20dbd7d3df02ae52ea2ee298190409c"
+  },
+  "measurements_ms": {
+    "engine_warm": 2392,
+    "multimodal_to_tool_call": 1699,
+    "tool_result_to_public_response": 115
+  },
+  "observed_tool_call": {
+    "name": "stop",
+    "arguments": {}
+  },
+  "observed_public_response_after_tool_result": "Stop.",
+  "conversation_token_count_after_followup": 1353,
+  "private_channels_published": false,
+  "limitations": [
+    "The STOP result was supplied by the acceptance harness to verify the model protocol; it was not a rover action result.",
+    "End-to-end physical HIL evidence is tracked separately through rosbridge action results."
+  ]
+}

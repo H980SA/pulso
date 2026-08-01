@@ -15,6 +15,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from server import SessionRepository, build_server  # noqa: E402
 
 
+class FakeRoverControl:
+    def __init__(self):
+        self.stop_count = 0
+
+    def emergency_stop(self):
+        self.stop_count += 1
+        return {"status": "ESTOP_LATCHED", "physical_achievement": "UNVERIFIED"}
+
+
 class SessionRepositoryTest(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
@@ -120,7 +129,10 @@ class SessionRepositoryTest(unittest.TestCase):
 class SessionHttpApiTest(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
-        self.server = build_server("127.0.0.1", 0, Path(self.temporary.name))
+        self.rover_control = FakeRoverControl()
+        self.server = build_server(
+            "127.0.0.1", 0, Path(self.temporary.name), rover_control=self.rover_control
+        )
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
         self.thread.start()
         self.base = f"http://127.0.0.1:{self.server.server_port}"
@@ -169,6 +181,12 @@ class SessionHttpApiTest(unittest.TestCase):
         self.assertEqual(exported["integrity_hash"], receipt["event_hash"])
         _, _, closed = self.request(f"/api/sessions/{session_id}/close", method="POST", body={})
         self.assertIsNotNone(closed["ended_at"])
+
+    def test_stop_all_calls_server_side_gateway_proxy(self):
+        status, _, body = self.request("/api/rover/stop", method="POST", body={})
+        self.assertEqual(status, 200)
+        self.assertEqual(body["status"], "ESTOP_LATCHED")
+        self.assertEqual(self.rover_control.stop_count, 1)
 
 
 if __name__ == "__main__":

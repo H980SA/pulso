@@ -23,6 +23,53 @@ Recommend both for durable product, architecture, security, or operational docum
 the Markdown remains maintainable while the visuals shorten onboarding. Do not ask again when the
 choice is explicit in the current request or already recorded in the owning feature capsule.
 
+## Script onboarding before illustrating it
+
+Treat onboarding as a sequential learning experience, not a catalog of features. Before generating
+raster:
+
+1. Define the novice reader, what they know, and what they must be able to do afterward.
+2. Write and pass through the human gate a complete text script. If the sequence is not clear
+   without imagery, it is not ready for imagery.
+3. Introduce every product term before first use. Define the purpose, user action, automatic system
+   behavior, resulting artifact, and next step for each frame.
+4. Use one running example across the sequence so each frame advances the same story. Do not change
+   metaphor, domain, or example merely for visual variety.
+5. Explain the product's motivation and limitations before implementation details. Never imply
+   automatic quality, security, token, time, or cost improvement when the system only enables and
+   measures it.
+6. Separate the ordered onboarding from a lookup-oriented reference library. Label the reference
+   pages as non-sequential and organize them by the reader's question or moment of need.
+7. Give sequential frames a stable orientation pattern such as `why`, `you`, `system`, `result`,
+   and `next`. Prefer comprehension over decorative density.
+
+Do not accept a generated onboarding because it is polished, consistent, or information-dense.
+Inspect whether a novice can explain the flow, vocabulary, choice points, outputs, and next action
+without relying on outside prose.
+
+## Give every visual a job
+
+Write a one-sentence purpose contract before prompting for any visual document:
+
+> For `[reader]` who needs to answer `[question]`, this visual makes `[relationship or sequence]`
+> faster to understand so they can `[decision or next action]`; truth is checked against
+> `[canonical source or evidence]`.
+
+A visual passes only when all five fields are real and specific. If there is no reader question,
+relationship, decision, or next action, it is decoration rather than documentation. Keep it out of
+the accepted documentation set.
+
+- Make the title the reader's actual question, not a feature name without context.
+- Show why the information matters before showing internal mechanics.
+- Label analogies with the exact product concepts they explain; never ask the reader to infer the
+  mapping from a pretty metaphor.
+- Use exact commands, ownership, limits, and outputs. Omit uncertain detail instead of filling
+  space.
+- End sequential frames with the next action. End reference frames with when to use them and the
+  evidence they should leave.
+- Test comprehension with a representative novice: they should identify the question, explain the
+  relationship, choose the next action, and name the source of truth without coaching.
+
 ## Keep every artifact inside Starloop project state
 
 Use project-owned paths; `init` and `update` must never manage or overwrite them:
@@ -47,11 +94,12 @@ beside accepted project documentation.
 
 ## Build visual documentation through the bundled adapter
 
-Invoke `$generate-web-image` and then `web_images_browser.create_image` as the mandatory route.
-This is Starloop's bundled ChatGPT web adapter, not an unrelated image plugin. Explain that the
-route preserves built-in Codex ImageGen usage. Treat login, approval, generation, and uncertain
-timeouts as pending states rather than failures. Use built-in ImageGen only after the definitive
-non-policy failure and disclosure required by the web-image skill.
+Invoke Starloop's bundled web-image skill as the mandatory route: `$generate-web-image` in Codex or
+`/chatgpt-web-images:generate-web-image` in Claude Code. It resolves the provider-specific
+`create_image` tool and is part of Starloop, not an unrelated image plugin. In Codex, explain that
+the route preserves built-in ImageGen usage; in Claude Code, explain that it adds raster generation
+through the user's ChatGPT subscription. Treat login, generation, and uncertain timeouts as pending
+states. Follow the web-image skill's provider-specific definitive-failure policy.
 
 Before generating:
 

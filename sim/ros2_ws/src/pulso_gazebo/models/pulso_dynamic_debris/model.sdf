@@ -1,0 +1,169 @@
+<?xml version='1.0'?>
+<sdf version='1.8'>
+  <model name='pulso_dynamic_debris'>
+    <static>false</static>
+    <self_collide>true</self_collide>
+    <link name='deb_brick_01'>
+      <pose>0.41999999 -0.57999998 0.0275 0 0 0</pose>
+      <inertial>
+        <mass>3.32210449</mass>
+        <inertia>
+          <ixx>0.00789385081</ixx><iyy>0.0130677401</iyy><izz>0.0192866966</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <velocity_decay><linear>0.12</linear><angular>0.2</angular></velocity_decay>
+      <collision name='collision'>
+        <geometry><box><size>0.21018533 0.15965249 0.055</size></box></geometry>
+        <surface>
+          <friction><ode><mu>0.86</mu><mu2>0.78</mu2></ode></friction>
+          <bounce><restitution_coefficient>0.015</restitution_coefficient><threshold>0.05</threshold></bounce>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://pulso_dynamic_debris/meshes/vis_dyn_deb_brick_01.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material><ambient>0.39 0.22 0.14 1</ambient><diffuse>0.39 0.22 0.14 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='deb_brick_02'>
+      <pose>2.8499999 0.52999997 0.0275 0 0 0</pose>
+      <inertial>
+        <mass>3.8235815</mass>
+        <inertia>
+          <ixx>0.0143252478</ixx><iyy>0.0122982211</iyy><izz>0.0246957465</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <velocity_decay><linear>0.12</linear><angular>0.2</angular></velocity_decay>
+      <collision name='collision'>
+        <geometry><box><size>0.18860532 0.20477702 0.055</size></box></geometry>
+        <surface>
+          <friction><ode><mu>0.86</mu><mu2>0.78</mu2></ode></friction>
+          <bounce><restitution_coefficient>0.015</restitution_coefficient><threshold>0.05</threshold></bounce>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://pulso_dynamic_debris/meshes/vis_dyn_deb_brick_02.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material><ambient>0.39 0.22 0.14 1</ambient><diffuse>0.39 0.22 0.14 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='deb_brick_03'>
+      <pose>2.29999995 -2 -0.0525 0 0 0</pose>
+      <inertial>
+        <mass>3.32442861</mass>
+        <inertia>
+          <ixx>0.0130773126</ixx><iyy>0.00790900822</iyy><izz>0.0193102548</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <velocity_decay><linear>0.12</linear><angular>0.2</angular></velocity_decay>
+      <collision name='collision'>
+        <geometry><box><size>0.15976137 0.21018903 0.055</size></box></geometry>
+        <surface>
+          <friction><ode><mu>0.86</mu><mu2>0.78</mu2></ode></friction>
+          <bounce><restitution_coefficient>0.015</restitution_coefficient><threshold>0.05</threshold></bounce>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://pulso_dynamic_debris/meshes/vis_dyn_deb_brick_03.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material><ambient>0.39 0.22 0.14 1</ambient><diffuse>0.39 0.22 0.14 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='deb_brick_04'>
+      <pose>4.4000001 -2.61999989 -0.0525 0 0 0</pose>
+      <inertial>
+        <mass>2.33946875</mass>
+        <inertia>
+          <ixx>0.00327597475</ixx><iyy>0.00849092781</iyy><izz>0.0105874204</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <velocity_decay><linear>0.12</linear><angular>0.2</angular></velocity_decay>
+      <collision name='collision'>
+        <geometry><box><size>0.20131594 0.11738265 0.055</size></box></geometry>
+        <surface>
+          <friction><ode><mu>0.86</mu><mu2>0.78</mu2></ode></friction>
+          <bounce><restitution_coefficient>0.015</restitution_coefficient><threshold>0.05</threshold></bounce>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://pulso_dynamic_debris/meshes/vis_dyn_deb_brick_04.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material><ambient>0.39 0.22 0.14 1</ambient><diffuse>0.39 0.22 0.14 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='deb_chunk_01'>
+      <pose>8.19999981 0.30000001 -0.095 0 0 0</pose>
+      <inertial>
+        <mass>10.7189449</mass>
+        <inertia>
+          <ixx>0.057033892</ixx><iyy>0.0595991044</iyy><izz>0.0858487345</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <velocity_decay><linear>0.12</linear><angular>0.2</angular></velocity_decay>
+      <collision name='collision'>
+        <geometry><box><size>0.22246413 0.21591318 0.13126954</size></box></geometry>
+        <surface>
+          <friction><ode><mu>0.86</mu><mu2>0.78</mu2></ode></friction>
+          <bounce><restitution_coefficient>0.015</restitution_coefficient><threshold>0.05</threshold></bounce>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://pulso_dynamic_debris/meshes/vis_dyn_deb_chunk_01.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material><ambient>0.42 0.43 0.45 1</ambient><diffuse>0.42 0.43 0.45 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='deb_plank_01'>
+      <pose>3.39999986 -2.75 -0.066 0 0 0</pose>
+      <inertial>
+        <mass>8.87731464</mass>
+        <inertia>
+          <ixx>0.278073858</ixx><iyy>0.469790522</iyy><izz>0.746704411</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <velocity_decay><linear>0.12</linear><angular>0.2</angular></velocity_decay>
+      <collision name='collision'>
+        <geometry><box><size>0.79640448 0.61245829 0.028</size></box></geometry>
+        <surface>
+          <friction><ode><mu>0.86</mu><mu2>0.78</mu2></ode></friction>
+          <bounce><restitution_coefficient>0.015</restitution_coefficient><threshold>0.05</threshold></bounce>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://pulso_dynamic_debris/meshes/vis_dyn_deb_plank_01.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material><ambient>0.28 0.2 0.13 1</ambient><diffuse>0.28 0.2 0.13 1</diffuse></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

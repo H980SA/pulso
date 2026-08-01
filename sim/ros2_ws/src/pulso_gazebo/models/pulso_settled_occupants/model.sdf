@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name='pulso_settled_occupants'>
+    <static>true</static>
+    <link name='settled_collision'>
+      <collision name='pulso_ragdoll_a_chest'>
+        <pose>-5.19334602 -0.22785629 0.23900937 1.63820418 0.52879692 -3.00856571</pose>
+        <geometry><box><size>0.3600001 0.25000003 0.59609807</size></box></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_foot_l'>
+        <pose>-4.64275169 -1.11481869 0.08000027 1.73338814 -1.02534941 -0.35982997</pose>
+        <geometry><capsule><radius>0.068</radius><length>0.19052184</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_foot_r'>
+        <pose>-5.21103764 -1.26258385 0.08000042 1.72110858 -0.97543969 -1.39360225</pose>
+        <geometry><capsule><radius>0.068</radius><length>0.19052178</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_hand_l'>
+        <pose>-4.76562214 -0.3878445 0.25027826 1.59892799 -0.59659625 0.95735289</pose>
+        <geometry><capsule><radius>0.058</radius><length>0.17268074</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_hand_r'>
+        <pose>-5.60778379 -0.52419221 0.06399959 1.66248376 -1.31501596 -0.39509679</pose>
+        <geometry><capsule><radius>0.058</radius><length>0.17268071</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_head'>
+        <pose>-5.29430389 0.18236685 0.16208239 2.22242479 -0.09177221 -2.661615</pose>
+        <geometry><capsule><radius>0.11500004</radius><length>0.14267147</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_lowerarm_l'>
+        <pose>-4.8791151 -0.23844609 0.25728703 1.62490031 -0.56388768 0.36692442</pose>
+        <geometry><capsule><radius>0.062</radius><length>0.21878851</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_lowerarm_r'>
+        <pose>-5.52645111 -0.34763873 0.07099996 1.72246556 -1.26347088 -0.67523822</pose>
+        <geometry><capsule><radius>0.062</radius><length>0.21878852</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_neck'>
+        <pose>-5.24194527 0.08367453 0.21444102 1.74334743 0.25966811 -2.67313533</pose>
+        <geometry><capsule><radius>0.073</radius><length>0.11171675</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_pelvis'>
+        <pose>-5.1588254 -0.49524993 0.24792266 0.52185977 -0.24046935 1.66988578</pose>
+        <geometry><box><size>0.24000002 0.22000003 0.29299766</size></box></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_shin_l'>
+        <pose>-4.72842836 -0.89520121 0.18833409 3.05063847 -1.02380762 -0.7668403</pose>
+        <geometry><capsule><radius>0.084</radius><length>0.38741629</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_shin_r'>
+        <pose>-5.15354013 -1.04603648 0.11900065 2.7096458 -1.39364586 -0.95866613</pose>
+        <geometry><capsule><radius>0.084</radius><length>0.38741647</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_thigh_l'>
+        <pose>-4.97192574 -0.63926268 0.30891961 -2.05889281 -1.3406082 -1.84859281</pose>
+        <geometry><capsule><radius>0.105</radius><length>0.37853941</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_thigh_r'>
+        <pose>-5.19766855 -0.66894984 0.15833697 -2.76157788 -1.52334429 -1.89301585</pose>
+        <geometry><capsule><radius>0.105</radius><length>0.37853943</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_upperarm_l'>
+        <pose>-5.01694822 -0.08661038 0.30773661 2.05542481 -0.59219104 0.79523625</pose>
+        <geometry><capsule><radius>0.072</radius><length>0.2351564</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_upperarm_r'>
+        <pose>-5.40173817 -0.16201295 0.10164849 2.73230869 -1.33071953 -1.80046461</pose>
+        <geometry><capsule><radius>0.072</radius><length>0.23515651</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_chest'>
+        <pose>9.07774448 -0.97496885 0.07768168 -0.89561021 -1.4098442 -1.99792668</pose>
+        <geometry><box><size>0.36000004 0.25 0.62338054</size></box></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_foot_l'>
+        <pose>8.59518051 -1.56374729 -0.07001532 1.66509323 0.63545182 1.11256075</pose>
+        <geometry><capsule><radius>0.068</radius><length>0.21117738</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_foot_r'>
+        <pose>8.09344006 -1.61066747 -0.06999988 1.72995786 1.07235077 0.24939829</pose>
+        <geometry><capsule><radius>0.068</radius><length>0.21117723</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_hand_l'>
+        <pose>9.00046539 -1.41512787 -0.08600077 1.60933977 1.01638005 -0.18699958</pose>
+        <geometry><capsule><radius>0.058</radius><length>0.19719699</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_hand_r'>
+        <pose>8.86818218 -1.04393852 -0.0561253 1.90049979 0.0545621 -0.73904547</pose>
+        <geometry><capsule><radius>0.058</radius><length>0.19719702</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_head'>
+        <pose>9.49411774 -0.9032414 0.01274195 -2.93741497 -0.94899686 0.14092838</pose>
+        <geometry><capsule><radius>0.11500002</radius><length>0.15337603</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_lowerarm_l'>
+        <pose>9.08849621 -1.20850599 -0.07900102 1.65752256 1.1069679 -0.46475138</pose>
+        <geometry><capsule><radius>0.062</radius><length>0.25802355</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_lowerarm_r'>
+        <pose>9.01158333 -0.91896635 0.05993802 2.31637599 0.27686913 -0.69861074</pose>
+        <geometry><capsule><radius>0.062</radius><length>0.25802351</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_neck'>
+        <pose>9.39045429 -0.91814214 0.0809453 -2.94005238 -1.0740884 -0.4254714</pose>
+        <geometry><capsule><radius>0.07300001</radius><length>0.10473575</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_pelvis'>
+        <pose>8.79980278 -1.03640914 0.04875247 -3.1415857 -0.56552955 1.00782105</pose>
+        <geometry><box><size>0.24000002 0.22000003 0.31261283</size></box></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_shin_l'>
+        <pose>8.4685564 -1.30228043 -0.04344309 1.70708133 0.87615153 0.27016347</pose>
+        <geometry><capsule><radius>0.08400001</radius><length>0.4267493</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_shin_r'>
+        <pose>8.26526165 -1.40016723 -0.0351152 -2.8342363 1.43820821 0.8335416</pose>
+        <geometry><capsule><radius>0.08399999</radius><length>0.42674899</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_thigh_l'>
+        <pose>8.63190556 -1.04042315 -0.03294307 1.3708221 1.37178944 -1.50958388</pose>
+        <geometry><capsule><radius>0.105</radius><length>0.41042605</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_thigh_r'>
+        <pose>8.60898876 -1.18945324 0.06514093 -3.00763338 1.20171666 0.72250558</pose>
+        <geometry><capsule><radius>0.105</radius><length>0.41042587</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_upperarm_l'>
+        <pose>9.20208645 -0.98298812 -0.07400194 1.57080416 1.35689841 -0.38803551</pose>
+        <geometry><capsule><radius>0.07200001</radius><length>0.24869249</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_upperarm_r'>
+        <pose>9.17092705 -0.9382686 0.20069917 2.44649621 0.9367572 -1.56524053</pose>
+        <geometry><capsule><radius>0.072</radius><length>0.24869202</length></capsule></geometry>
+        <surface><friction><ode><mu>0.78</mu><mu2>0.78</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_beam'>
+        <pose>-5.12647772 -2.14053822 0.10914927 -1.58555349 0.00598207 2.66120439</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_beam.obj</uri><scale>0.99999994 0.99999994 0.99999988</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_00'>
+        <pose>-3.93318248 -0.53064638 0.98292798 -1.57266435 0.03335986 0.20907806</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_00.obj</uri><scale>1.0 1.00000012 1.00000012</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_01'>
+        <pose>-4.8668189 -1.2417872 0.0705469 -3.12344742 -0.01596047 0.35235214</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_01.obj</uri><scale>0.99999988 1.0 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_02'>
+        <pose>-5.09067678 -2.86176038 0.10597013 -0.34463956 -1.40616505 -1.16862863</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_02.obj</uri><scale>1.00000012 1.00000012 1.00000012</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_03'>
+        <pose>-4.35897493 -0.36630169 0.89910913 -0.46249664 -1.52541255 -2.1891356</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_03.obj</uri><scale>1.00000012 1.00000024 1.00000012</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_04'>
+        <pose>-4.92419291 0.31519261 0.28095663 -0.03577768 0.06371349 -3.12443018</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_04.obj</uri><scale>1.00000036 1.00000024 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_05'>
+        <pose>-3.80368233 -1.72308731 0.08613362 -3.08972284 -0.0645267 2.49920296</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_05.obj</uri><scale>1.0 0.99999994 1.00000012</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_06'>
+        <pose>-5.85581684 -2.73154974 0.10842124 0.44448797 1.55173276 -2.95296433</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_06.obj</uri><scale>1.00000012 1.00000012 1.00000012</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_07'>
+        <pose>-1.54651976 2.80204368 0.09831271 -3.12303508 -0.10003988 -2.06283684</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_07.obj</uri><scale>1.00000012 1.0 1.00000012</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_08'>
+        <pose>-5.51802015 -2.42557144 0.12608901 3.10882306 -0.01434785 1.01702956</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_08.obj</uri><scale>0.99999994 0.99999982 0.99999982</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_chunk_09'>
+        <pose>-5.54455853 -2.8434329 0.16488057 -1.43708893 -1.49226022 -0.36636007</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_chunk_09.obj</uri><scale>1.00000012 1.00000012 1.00000012</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_primary_slab'>
+        <pose>-4.9121418 -1.4988457 0.21563233 0.13936839 0.05400322 -0.13040835</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_primary_slab.obj</uri><scale>0.99999994 1.0 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_a_debris_secondary_slab'>
+        <pose>-4.94186068 -0.67524862 0.51476234 0.05262493 0.13511435 -1.07425264</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_a_debris_secondary_slab.obj</uri><scale>0.99999988 0.99999982 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_beam'>
+        <pose>6.68808031 -0.68040591 0.11574753 1.45245276 0.00664716 0.60451235</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_beam.obj</uri><scale>0.99999982 0.99999994 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_00'>
+        <pose>7.71454382 -0.91106349 -0.05109078 3.10667885 0.10416499 -2.7082647</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_00.obj</uri><scale>1.00000048 0.99999994 1.00000048</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_01'>
+        <pose>9.44299316 -1.77267098 -0.02797941 -0.01414896 -0.08300012 3.0037415</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_01.obj</uri><scale>1.00000036 1.00000048 0.99999994</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_02'>
+        <pose>9.50258732 -1.1684171 0.03220881 0.36125102 -1.42901381 1.96221485</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_02.obj</uri><scale>0.99999994 0.99999994 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_03'>
+        <pose>7.70324802 2.54307032 0.01511355 -1.61067058 -0.02156973 -1.43429765</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_03.obj</uri><scale>0.99999994 1.0 0.99999988</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_04'>
+        <pose>8.14144325 -0.38848773 0.37452927 3.13556683 1.52968987 -0.0585382</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_04.obj</uri><scale>1.0 0.99999994 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_05'>
+        <pose>5.07123327 -2.90801859 0.09748757 -1.17277068 1.25126106 -0.24034213</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_05.obj</uri><scale>1.00000012 0.99999994 1.00000012</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_06'>
+        <pose>4.84215212 -2.248312 0.13346283 -3.07344077 -0.07373636 2.14737925</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_06.obj</uri><scale>0.99999988 0.99999988 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_07'>
+        <pose>6.38780975 -1.52808142 0.10223466 2.86453084 -0.01283755 2.1419533</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_07.obj</uri><scale>1.0 1.0 0.99999994</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_08'>
+        <pose>9.52315331 -2.10704827 -0.02978006 -0.07859923 -0.02767093 -2.99884679</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_08.obj</uri><scale>1.00000036 1.00000036 0.99999988</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_chunk_09'>
+        <pose>9.04996681 2.59608579 -0.06225962 -0.0029564 0.05811602 1.65054323</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_chunk_09.obj</uri><scale>1.0 1.0 0.99999988</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_primary_slab'>
+        <pose>8.36673069 -1.81892705 0.08572982 0.25506036 0.08910506 0.23784036</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_primary_slab.obj</uri><scale>0.99999994 1.0 1.0</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+      <collision name='pulso_ragdoll_b_debris_secondary_slab'>
+        <pose>7.11991787 -1.61362171 0.14668065 3.12857083 -0.00868193 -1.80326159</pose>
+        <geometry><mesh><uri>meshes/pulso_ragdoll_b_debris_secondary_slab.obj</uri><scale>0.99999994 1.0 0.99999994</scale></mesh></geometry>
+        <surface><friction><ode><mu>0.86</mu><mu2>0.86</mu2></ode></friction></surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

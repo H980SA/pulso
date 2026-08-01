@@ -1,0 +1,394 @@
+{
+  "contract": "pulso.dynamic-debris.v1",
+  "source": "art/current/ragdoll/navigable/pulso_ragdoll_navigable.blend",
+  "source_sha256": "511f710b3dde74785358ff1631a6d0f876b73138c826410224a20862b0079b19",
+  "blender_version": "5.2.0 LTS",
+  "coordinate_frame": "Blender world XYZ == Gazebo model XYZ; include pose must be zero",
+  "runtime_policy": "six independent dynamic links with authored visual meshes and box colliders",
+  "pieces": [
+    {
+      "id": "DEB_BRICK_01",
+      "link_name": "deb_brick_01",
+      "world_pose": "0.41999999 -0.57999998 0.0275 0 0 0",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.41999999
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.57999998
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0275
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "collision_size_m": [
+        0.21018533,
+        0.15965249,
+        0.055
+      ],
+      "density_kg_m3": 1800.0,
+      "mass_kg": 3.3221044908838238,
+      "inertia_kg_m2": {
+        "ixx": 0.007893850808991914,
+        "iyy": 0.01306774014986496,
+        "izz": 0.019286696629520792
+      },
+      "colour_rgba": [
+        0.39,
+        0.22,
+        0.14,
+        1.0
+      ],
+      "visual_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh_path": "meshes/vis_dyn_deb_brick_01.obj",
+      "mesh": {
+        "vertices": 24,
+        "triangles": 44,
+        "uv_coordinates": 132,
+        "minimum_uv_triangle_area": 0.00176584223,
+        "tangent_ready": true,
+        "sha256": "3dbe7f06dbe7c9c73be5bcf1bf2fecc79ecef7471204681e005427fd39803c9b"
+      }
+    },
+    {
+      "id": "DEB_BRICK_02",
+      "link_name": "deb_brick_02",
+      "world_pose": "2.8499999 0.52999997 0.0275 0 0 0",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.8499999
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.52999997
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0275
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "collision_size_m": [
+        0.18860532,
+        0.20477702,
+        0.055
+      ],
+      "density_kg_m3": 1800.0,
+      "mass_kg": 3.8235815004713665,
+      "inertia_kg_m2": {
+        "ixx": 0.014325247795645292,
+        "iyy": 0.012298221066604824,
+        "izz": 0.024695746543320265
+      },
+      "colour_rgba": [
+        0.39,
+        0.22,
+        0.14,
+        1.0
+      ],
+      "visual_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh_path": "meshes/vis_dyn_deb_brick_02.obj",
+      "mesh": {
+        "vertices": 24,
+        "triangles": 44,
+        "uv_coordinates": 132,
+        "minimum_uv_triangle_area": 0.001951899735,
+        "tangent_ready": true,
+        "sha256": "00f787c5d93642f461cb1945c528e33dc909e221586e421bfedd8f0bf960ade4"
+      }
+    },
+    {
+      "id": "DEB_BRICK_03",
+      "link_name": "deb_brick_03",
+      "world_pose": "2.29999995 -2 -0.0525 0 0 0",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.29999995
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0525
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "collision_size_m": [
+        0.15976137,
+        0.21018903,
+        0.055
+      ],
+      "density_kg_m3": 1800.0,
+      "mass_kg": 3.324428610983263,
+      "inertia_kg_m2": {
+        "ixx": 0.013077312617447379,
+        "iyy": 0.007909008223343266,
+        "izz": 0.01931025476758379
+      },
+      "colour_rgba": [
+        0.39,
+        0.22,
+        0.14,
+        1.0
+      ],
+      "visual_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh_path": "meshes/vis_dyn_deb_brick_03.obj",
+      "mesh": {
+        "vertices": 24,
+        "triangles": 44,
+        "uv_coordinates": 132,
+        "minimum_uv_triangle_area": 0.001766415148,
+        "tangent_ready": true,
+        "sha256": "9bc5c6cc087f69ffc226e5a2021b31e8f54c20c9fc143d6fff89357cee4ebfa7"
+      }
+    },
+    {
+      "id": "DEB_BRICK_04",
+      "link_name": "deb_brick_04",
+      "world_pose": "4.4000001 -2.61999989 -0.0525 0 0 0",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.4000001
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.61999989
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0525
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "collision_size_m": [
+        0.20131594,
+        0.11738265,
+        0.055
+      ],
+      "density_kg_m3": 1800.0,
+      "mass_kg": 2.3394687470237048,
+      "inertia_kg_m2": {
+        "ixx": 0.0032759747467723983,
+        "iyy": 0.008490927806537643,
+        "izz": 0.01058742040613455
+      },
+      "colour_rgba": [
+        0.39,
+        0.22,
+        0.14,
+        1.0
+      ],
+      "visual_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh_path": "meshes/vis_dyn_deb_brick_04.obj",
+      "mesh": {
+        "vertices": 24,
+        "triangles": 44,
+        "uv_coordinates": 132,
+        "minimum_uv_triangle_area": 0.001567607248,
+        "tangent_ready": true,
+        "sha256": "d423774a5bdb00a761833583c01fff85c487b07219e3acef51f867053b82f795"
+      }
+    },
+    {
+      "id": "DEB_CHUNK_01",
+      "link_name": "deb_chunk_01",
+      "world_pose": "8.19999981 0.30000001 -0.095 0 0 0",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.19999981
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.30000001
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.095
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "collision_size_m": [
+        0.22246413,
+        0.21591318,
+        0.13126954
+      ],
+      "density_kg_m3": 1700.0,
+      "mass_kg": 10.718944944289733,
+      "inertia_kg_m2": {
+        "ixx": 0.05703389202501474,
+        "iyy": 0.05959910440561681,
+        "izz": 0.08584873450796454
+      },
+      "colour_rgba": [
+        0.42,
+        0.43,
+        0.45,
+        1.0
+      ],
+      "visual_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh_path": "meshes/vis_dyn_deb_chunk_01.obj",
+      "mesh": {
+        "vertices": 24,
+        "triangles": 44,
+        "uv_coordinates": 132,
+        "minimum_uv_triangle_area": 0.000729641091,
+        "tangent_ready": true,
+        "sha256": "3442701bcb36d51dd0058b42e3432d07bc7d14a00ce2169c75d8bcbfabee91db"
+      }
+    },
+    {
+      "id": "DEB_PLANK_01",
+      "link_name": "deb_plank_01",
+      "world_pose": "3.39999986 -2.75 -0.066 0 0 0",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          3.39999986
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.75
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.066
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "collision_size_m": [
+        0.79640448,
+        0.61245829,
+        0.028
+      ],
+      "density_kg_m3": 650.0,
+      "mass_kg": 8.877314637780538,
+      "inertia_kg_m2": {
+        "ixx": 0.2780738584575531,
+        "iyy": 0.46979052171673324,
+        "izz": 0.7467044109900076
+      },
+      "colour_rgba": [
+        0.28,
+        0.2,
+        0.13,
+        1.0
+      ],
+      "visual_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh_path": "meshes/vis_dyn_deb_plank_01.obj",
+      "mesh": {
+        "vertices": 24,
+        "triangles": 44,
+        "uv_coordinates": 132,
+        "minimum_uv_triangle_area": 0.000568607391,
+        "tangent_ready": true,
+        "sha256": "7771a2f5672e2909ae47761abe7f169cea19b3650549a5ffffedcd5b8d25eb3c"
+      }
+    }
+  ],
+  "totals": {
+    "links": 6,
+    "mass_kg": 32.40584293,
+    "visual_triangles": 264
+  },
+  "sdf_sha256": "1f119a52c96cfe8bce6607492efd8ee77f9e8c6ec693f116bf709d48a16f503b"
+}

@@ -37,6 +37,23 @@ export class RosbridgeClient {
     this.listeners.onStatus?.("waiting", "Desconectado por el operador");
   }
 
+  publishOperatorCommand(command) {
+    if (!this.socket || this.socket.readyState !== WebSocket.OPEN) {
+      throw new Error("El enlace ROS con el S25 no está conectado");
+    }
+    const payload = {
+      command,
+      nonce: crypto.randomUUID(),
+      issued_at_ms: Date.now(),
+    };
+    this.socket.send(JSON.stringify({
+      op: "publish",
+      topic: "/pulso/operator/command",
+      msg: { data: JSON.stringify(payload) },
+    }));
+    return payload.nonce;
+  }
+
   open(socket) {
     if (socket !== this.socket) return;
     this.retryCount = 0;
