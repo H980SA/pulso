@@ -12,6 +12,14 @@ require(pulsoHilUrl.startsWith("ws://") || pulsoHilUrl.startsWith("wss://")) {
     "pulsoHilUrl must use ws:// or wss://"
 }
 val pulsoHilUrlLiteral = "\"${pulsoHilUrl.replace("\\", "\\\\").replace("\"", "\\\"")}\""
+val pulsoSimHilUrl = providers.gradleProperty("pulsoSimHilUrl")
+    .orElse(providers.environmentVariable("PULSO_SIM_HIL_URL"))
+    .orElse("ws://127.0.0.1:9092")
+    .get()
+require(pulsoSimHilUrl.startsWith("ws://") || pulsoSimHilUrl.startsWith("wss://")) {
+    "pulsoSimHilUrl must use ws:// or wss://"
+}
+val pulsoSimHilUrlLiteral = "\"${pulsoSimHilUrl.replace("\\", "\\\\").replace("\"", "\\\"")}\""
 val pulsoRoverUrl = providers.gradleProperty("pulsoRoverUrl")
     .orElse(providers.environmentVariable("PULSO_ROVER_URL"))
     .orElse("http://10.245.145.36:8765")
@@ -42,6 +50,7 @@ android {
         versionCode = 1
         versionName = "0.1.0"
         buildConfigField("String", "DEFAULT_HIL_URL", pulsoHilUrlLiteral)
+        buildConfigField("String", "SIM_HIL_URL", pulsoSimHilUrlLiteral)
         buildConfigField("String", "ROVER_GATEWAY_URL", pulsoRoverUrlLiteral)
         buildConfigField("String", "ROVER_GATEWAY_TOKEN", pulsoRoverTokenLiteral)
         buildConfigField("boolean", "ROVER_ACTUATION_ENABLED", pulsoRoverActuationEnabled.toString())

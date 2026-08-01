@@ -231,7 +231,7 @@ class PulsoViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             _state.value = _state.value.copy(busy = true, sensorStatus = "CONNECTING")
             stopRealSession()
-            val source = GazeboHilSource(BuildConfig.DEFAULT_HIL_URL)
+            val source = GazeboHilSource(BuildConfig.SIM_HIL_URL)
             val failure = runCatching { source.start() }.exceptionOrNull()
             if (failure != null) {
                 source.close()
@@ -251,7 +251,7 @@ class PulsoViewModel(application: Application) : AndroidViewModel(application) {
                 hasLiveObservation = false,
                 lastSensorFrameElapsedMs = null,
             )
-            appendTrace("SENSOR", "Conectado a ${BuildConfig.DEFAULT_HIL_URL}")
+            appendTrace("SENSOR", "Conectado a ${BuildConfig.SIM_HIL_URL}")
             hilObservationJob = viewModelScope.launch {
                 source.observations.collect(::integrateHilFrame)
             }

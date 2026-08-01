@@ -218,7 +218,7 @@ def generate_launch_description() -> LaunchDescription:
                 parameters=[
                     {
                         "port": ParameterValue(hil_port, value_type=int),
-                        "address": "127.0.0.1",
+                        "address": "0.0.0.0",
                         "authenticate": False,
                         "ssl": False,
                         "max_message_size": 4_000_000,

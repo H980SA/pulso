@@ -96,7 +96,7 @@ grep -Fq 'STOP_ATTEMPTED_UNCONFIRMED' \
 pass "physical-motion boundary"
 
 real_bridge="infra/ubuntu/run_real_bridge.sh"
-grep -Fq 'address:=127.0.0.1' "${real_bridge}" || fail "REAL bridge not loopback-only"
+grep -Fq 'PULSO_ROSBRIDGE_ADDRESS:-0.0.0.0' "${real_bridge}" || fail "REAL bridge not available to field Wi-Fi"
 grep -Fq 'services_glob:="[]"' "${real_bridge}" || fail "REAL services not denied"
 grep -Fq 'actions_glob:="[]"' "${real_bridge}" || fail "REAL actions not denied"
 if rg -n '/pulso/hil/action_intent' "${real_bridge}"; then

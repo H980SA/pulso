@@ -1,6 +1,6 @@
-"""Loopback-only rosbridge for the physical S25 telemetry mirror.
+"""Evidence-only rosbridge for the physical S25 telemetry mirror.
 
-The phone reaches this socket through ``adb reverse``. Clients may publish only
+The phone reaches this socket over the private field Wi-Fi. Clients may publish only
 the read-only evidence topics consumed by Mission Control; no motion, service,
 or action endpoint is exposed.
 """
@@ -41,7 +41,7 @@ def generate_launch_description() -> LaunchDescription:
                 parameters=[
                     {
                         "port": 9091,
-                        "address": "127.0.0.1",
+                        "address": "0.0.0.0",
                         "authenticate": False,
                         "ssl": False,
                         "max_message_size": 4_000_000,
