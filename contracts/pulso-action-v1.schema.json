@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pulso.local/contracts/pulso-action-v1.schema.json",
+  "title": "Pulso action intent v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "action_id", "mission_id", "kind", "issued_monotonic_ns"],
+  "properties": {
+    "contract_version": { "const": "pulso.action.v1" },
+    "action_id": { "type": "string", "minLength": 1 },
+    "mission_id": { "type": "string", "minLength": 1 },
+    "goal_id": { "type": ["string", "null"] },
+    "issued_monotonic_ns": { "type": "integer", "minimum": 0 },
+    "candidate_capability": { "type": "string", "minLength": 16, "maxLength": 128 },
+    "expected_navigation_revision": { "type": "integer", "minimum": 0 },
+    "expected_tracking_epoch": { "type": "integer", "minimum": 0 },
+    "expected_target_revision": { "type": ["integer", "null"], "minimum": 0 },
+    "kind": {
+      "enum": [
+        "STOP",
+        "MOVE_TO",
+        "LOOK_AT",
+        "REQUEST_VIEW",
+        "SET_FLASHLIGHT",
+        "SPEAK",
+        "LISTEN",
+        "SET_MISSION_FOCUS",
+        "UPSERT_HYPOTHESIS",
+        "LOAD_SKILL"
+      ]
+    },
+    "target": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["type", "id"],
+      "properties": {
+        "type": { "enum": ["VIEWPOINT", "FRONTIER", "TARGET", "ANCHOR"] },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "description": "Action-specific JSON-native values; validated again by the owning tool."
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "enum": ["MOVE_TO", "LOOK_AT", "REQUEST_VIEW"] } } },
+      "then": {
+        "required": [
+          "target",
+          "candidate_capability",
+          "expected_navigation_revision",
+          "expected_tracking_epoch"
+        ]
+      }
+    }
+  ]
+}
